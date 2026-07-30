@@ -19,3 +19,16 @@ async function updateDashboard(data) {
   document.getElementById("vix").innerText = data.vix;
   document.getElementById("fii").innerText = data.fii;
 }
+document.getElementById("niftyLive").innerText = "24,250.35";
+document.getElementById("banknifty").innerText = "55,420.10";
+document.getElementById("vixLive").innerText = "11.82";
+document.getElementById("trend").innerText = "Bullish 🟢";
+
+document.getElementById("aiSignal").innerText = "BUY CE";
+document.getElementById("confidence").innerText = "87%";
+
+document.getElementById("news").innerHTML = `
+<li>Global markets closed positive.</li>
+<li>Gift Nifty indicates positive opening.</li>
+<li>FII buying continues.</li>
+`;
