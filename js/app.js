@@ -65,3 +65,11 @@ setInterval(() => {
 }, 60000);
 
 loadTradingViewChart();
+// Dashboard Start
+document.addEventListener("DOMContentLoaded", () => {
+
+  if (typeof loadTradingViewChart === "function") {
+    loadTradingViewChart();
+  }
+
+});
