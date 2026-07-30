@@ -63,3 +63,5 @@ setInterval(updateTime, 1000);
 setInterval(() => {
   console.log("Refreshing dashboard...");
 }, 60000);
+
+loadTradingViewChart();
