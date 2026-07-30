@@ -3,73 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nifty AI Pro Dashboard</title>
+<title>Nifty AI Pro Dashboard v3.0</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="header">
 <h1>📈 Nifty AI Pro Dashboard</h1>
+<p>AI Based Market Analysis</p>
 </header>
 
 <div class="container">
 
-<div class="card score">
+<div class="card health">
 <h2>Market Health</h2>
 <h1 id="score">82/100</h1>
-<p>🟢 Bullish</p>
+<p id="marketStatus">🟢 Bullish</p>
 </div>
 
-<div class="card">
-<h2>Recommendation</h2>
+<div class="card signal">
+<h2>AI Signal</h2>
 <h1 id="signal">BUY CE</h1>
-<p>Confidence : 84%</p>
-</div>
-
-<div class="card">
-<h2>NIFTY 50</h2>
-<h1 id="nifty">Loading...</h1>
-</div>
-
-<div class="card">
-<h2>Gift Nifty</h2>
-<p id="gift">Loading...</p>
-</div>
-
-<div class="card">
-<h2>India VIX</h2>
-<p id="vix">Loading...</p>
-</div>
-
-<div class="card">
-<h2>FII / DII</h2>
-<p id="fii">Loading...</p>
-</div>
-
-<div class="card">
-<h2>🌍 Global Markets</h2>
-<p>🇺🇸 Dow Jones : <span id="dow">Loading...</span></p>
-<p>🇺🇸 Nasdaq : <span id="nasdaq">Loading...</span></p>
-<p>🇯🇵 Nikkei : <span id="nikkei">Loading...</span></p>
-<p>🇭🇰 Hang Seng : <span id="hangseng">Loading...</span></p>
-</div>
-
-<div class="card">
-<h2>🎯 Trade Plan</h2>
-<p>Strike : <span id="strike">24250 CE</span></p>
-<p>Entry : <span id="entry">₹145–150</span></p>
-<p>Stop Loss : <span id="sl">₹130</span></p>
-<p>Target : <span id="target">₹180 / ₹220</span></p>
+<p>Confidence : <span id="confidence">84%</span></p>
 </div>
 
 <div class="card">
 <h2>📊 Live Market</h2>
 
-<table width="100%">
+<table>
+
 <tr>
 <td>NIFTY</td>
-<td id="niftyLive">Loading...</td>
+<td id="nifty">Loading...</td>
 </tr>
 
 <tr>
@@ -79,12 +45,12 @@
 
 <tr>
 <td>INDIA VIX</td>
-<td id="vixLive">Loading...</td>
+<td id="vix">Loading...</td>
 </tr>
 
 <tr>
-<td>Trend</td>
-<td id="trend">Loading...</td>
+<td>Gift Nifty</td>
+<td id="gift">Loading...</td>
 </tr>
 
 </table>
@@ -92,33 +58,32 @@
 </div>
 
 <div class="card">
-<h2>🤖 AI Trading Signal</h2>
+<h2>🌍 Global Markets</h2>
 
-<h1 id="aiSignal">WAIT...</h1>
+<p>🇺🇸 Dow Jones :
+<span id="dow">Loading...</span></p>
 
-<p>
-Confidence :
-<span id="confidence">0%</span>
-</p>
+<p>🇺🇸 Nasdaq :
+<span id="nasdaq">Loading...</span></p>
+
+<p>🇯🇵 Nikkei :
+<span id="nikkei">Loading...</span></p>
+
+<p>🇭🇰 Hang Seng :
+<span id="hangseng">Loading...</span></p>
 
 </div>
 
 <div class="card">
 
-<h2>📰 Market News</h2>
+<h2>📉 AI Market Score</h2>
 
-<ul id="news">
+<h1 id="aiscore">84</h1>
 
-<li>Loading latest news...</li>
-
-</ul>
+<progress
+id="progress"
+value="84"
+max="100">
+</progress>
 
 </div>
-
-</div>
-
-<script src="app.js"></script>
-
-</body>
-
-</html>
