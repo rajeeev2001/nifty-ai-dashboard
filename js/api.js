@@ -34,3 +34,14 @@ const MarketAPI = {
   }
 
 };
+
+MarketAPI.getOptionChain = function () {
+
+  return {
+    pcr: "0.94",
+    maxPain: "24200",
+    callOI: "1.82 Cr",
+    putOI: "2.11 Cr"
+  };
+
+};
