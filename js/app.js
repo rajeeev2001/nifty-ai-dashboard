@@ -102,3 +102,8 @@ function updateMarketStatus() {
 
 updateMarketStatus();
 setInterval(updateMarketStatus, 60000);
+document.addEventListener("DOMContentLoaded",()=>{
+
+runAI();
+
+});
