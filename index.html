@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nifty AI Pro Dashboard v4.0</title>
 
 <link rel="stylesheet" href="css/style.css">
@@ -12,22 +15,34 @@
 <body>
 
 <header class="header">
+
 <h1>📈 Nifty AI Pro Dashboard</h1>
+
 <p>AI Based Market Analysis</p>
+
 </header>
 
 <div class="container">
 
 <div class="card health">
+
 <h2>Market Health</h2>
+
 <h1 id="score">82/100</h1>
+
 <p id="marketStatus">🟢 Bullish</p>
+
 </div>
 
 <div class="card signal">
+
 <h2>AI Signal</h2>
+
 <h1 id="signal">BUY CE</h1>
-<p>Confidence : <span id="confidence">84%</span></p>
+
+<p>Confidence :
+<span id="confidence">84%</span></p>
+
 </div>
 
 <div class="card">
@@ -145,11 +160,29 @@
 
 </div>
 
+<!-- TradingView Chart -->
+
+<div class="card">
+
+<h2>📈 Live Trading Chart</h2>
+
+<div id="tvchart">
+
+Loading Chart...
+
+</div>
+
+</div>
+
 <div class="card">
 
 <h2>⏰ Last Update</h2>
 
-<p id="time">Loading...</p>
+<p id="time">
+
+Loading...
+
+</p>
 
 </div>
 
@@ -168,4 +201,5 @@
 <script src="js/app.js"></script>
 
 </body>
+
 </html>
