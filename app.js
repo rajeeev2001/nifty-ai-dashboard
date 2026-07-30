@@ -1,34 +1,65 @@
-// Demo Data (बाद में इसे Live Data से बदलेंगे)
+// ===============================
+// Nifty AI Dashboard v3.0
+// Demo Data (Live API बाद में जोड़ेंगे)
+// ===============================
 
-document.getElementById("nifty").innerText = "24,250.35 (+0.62%)";
-document.getElementById("gift").innerText = "24,285 🟢";
-document.getElementById("vix").innerText = "12.50 🟢 Stable";
-document.getElementById("fii").innerText = "FII Buying ₹1,250 Cr 🟢";
+const market = {
+  nifty: "24,250.35 ▲ +0.62%",
+  banknifty: "55,420.10 ▲ +0.48%",
+  vix: "11.82 🟢",
+  gift: "24,285 🟢",
+  dow: "+0.45%",
+  nasdaq: "+0.62%",
+  nikkei: "-0.21%",
+  hangseng: "+0.38%"
+};
 
-// हर 5 सेकंड में डेमो डेटा अपडेट
-setInterval(() => {
-  document.getElementById("nifty").innerText = "24,250.35 (+0.62%)";
-}, 5000);
-document.getElementById("dow").innerText = "🟢 +0.45%";
-document.getElementById("nasdaq").innerText = "🟢 +0.62%";
-document.getElementById("nikkei").innerText = "🔴 -0.21%";
-document.getElementById("hangseng").innerText = "🟢 +0.38%";
-async function updateDashboard(data) {
-  document.getElementById("nifty").innerText = data.nifty;
-  document.getElementById("gift").innerText = data.giftNifty;
-  document.getElementById("vix").innerText = data.vix;
-  document.getElementById("fii").innerText = data.fii;
-}
-document.getElementById("niftyLive").innerText = "24,250.35";
-document.getElementById("banknifty").innerText = "55,420.10";
-document.getElementById("vixLive").innerText = "11.82";
-document.getElementById("trend").innerText = "Bullish 🟢";
+// Live Market
+document.getElementById("nifty").innerHTML = market.nifty;
+document.getElementById("banknifty").innerHTML = market.banknifty;
+document.getElementById("vix").innerHTML = market.vix;
+document.getElementById("gift").innerHTML = market.gift;
 
-document.getElementById("aiSignal").innerText = "BUY CE";
-document.getElementById("confidence").innerText = "87%";
+// Global Markets
+document.getElementById("dow").innerHTML = "🟢 " + market.dow;
+document.getElementById("nasdaq").innerHTML = "🟢 " + market.nasdaq;
+document.getElementById("nikkei").innerHTML = "🔴 " + market.nikkei;
+document.getElementById("hangseng").innerHTML = "🟢 " + market.hangseng;
 
+// AI Score
+document.getElementById("score").innerHTML = "84/100";
+document.getElementById("aiscore").innerHTML = "84";
+document.getElementById("progress").value = 84;
+
+// Signal
+document.getElementById("signal").innerHTML = "BUY CE 🟢";
+document.getElementById("confidence").innerHTML = "87%";
+document.getElementById("marketStatus").innerHTML = "Bullish 🟢";
+
+// Support & Resistance
+document.getElementById("support").innerHTML = "24200";
+document.getElementById("resistance").innerHTML = "24400";
+document.getElementById("trend").innerHTML = "Bullish 🟢";
+
+// News
 document.getElementById("news").innerHTML = `
 <li>Global markets closed positive.</li>
 <li>Gift Nifty indicates positive opening.</li>
+<li>India VIX remains stable.</li>
 <li>FII buying continues.</li>
+<li>Watch 24200 support today.</li>
 `;
+
+// Clock
+function updateTime() {
+  document.getElementById("time").innerHTML =
+    new Date().toLocaleString();
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+
+// Auto Refresh every 60 sec
+setInterval(() => {
+  console.log("Refreshing dashboard...");
+}, 60000);
