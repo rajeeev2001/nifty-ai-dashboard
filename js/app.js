@@ -73,3 +73,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+// ==========================
+// Market Status
+// ==========================
+
+function updateMarketStatus() {
+
+  const now = new Date();
+
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+
+  let status = "🔴 Market Closed";
+
+  if (
+    (hour > 9 || (hour === 9 && minute >= 15)) &&
+    (hour < 15 || (hour === 15 && minute <= 30))
+  ) {
+    status = "🟢 Market Open";
+  }
+
+  const marketStatus = document.getElementById("marketStatus");
+
+  if (marketStatus) {
+    marketStatus.innerHTML = status;
+  }
+}
+
+updateMarketStatus();
+setInterval(updateMarketStatus, 60000);
