@@ -1,34 +1,124 @@
-<div class="card">
-  <h2>📊 Live Market</h2>
-  <table width="100%">
-    <tr>
-      <td>NIFTY 50</td>
-      <td id="niftyLive">Loading...</td>
-    </tr>
-    <tr>
-      <td>BANK NIFTY</td>
-      <td id="banknifty">Loading...</td>
-    </tr>
-    <tr>
-      <td>INDIA VIX</td>
-      <td id="vixLive">Loading...</td>
-    </tr>
-    <tr>
-      <td>Market Trend</td>
-      <td id="trend">Loading...</td>
-    </tr>
-  </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nifty AI Pro Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>📈 Nifty AI Pro Dashboard</h1>
+</header>
+
+<div class="container">
+
+<div class="card score">
+<h2>Market Health</h2>
+<h1 id="score">82/100</h1>
+<p>🟢 Bullish</p>
 </div>
 
 <div class="card">
-  <h2>🤖 AI Trading Signal</h2>
-  <h1 id="aiSignal">WAIT...</h1>
-  <p>Confidence: <span id="confidence">0%</span></p>
+<h2>Recommendation</h2>
+<h1 id="signal">BUY CE</h1>
+<p>Confidence : 84%</p>
 </div>
 
 <div class="card">
-  <h2>📰 Market News</h2>
-  <ul id="news">
-    <li>Loading latest news...</li>
-  </ul>
+<h2>NIFTY 50</h2>
+<h1 id="nifty">Loading...</h1>
 </div>
+
+<div class="card">
+<h2>Gift Nifty</h2>
+<p id="gift">Loading...</p>
+</div>
+
+<div class="card">
+<h2>India VIX</h2>
+<p id="vix">Loading...</p>
+</div>
+
+<div class="card">
+<h2>FII / DII</h2>
+<p id="fii">Loading...</p>
+</div>
+
+<div class="card">
+<h2>🌍 Global Markets</h2>
+<p>🇺🇸 Dow Jones : <span id="dow">Loading...</span></p>
+<p>🇺🇸 Nasdaq : <span id="nasdaq">Loading...</span></p>
+<p>🇯🇵 Nikkei : <span id="nikkei">Loading...</span></p>
+<p>🇭🇰 Hang Seng : <span id="hangseng">Loading...</span></p>
+</div>
+
+<div class="card">
+<h2>🎯 Trade Plan</h2>
+<p>Strike : <span id="strike">24250 CE</span></p>
+<p>Entry : <span id="entry">₹145–150</span></p>
+<p>Stop Loss : <span id="sl">₹130</span></p>
+<p>Target : <span id="target">₹180 / ₹220</span></p>
+</div>
+
+<div class="card">
+<h2>📊 Live Market</h2>
+
+<table width="100%">
+<tr>
+<td>NIFTY</td>
+<td id="niftyLive">Loading...</td>
+</tr>
+
+<tr>
+<td>BANK NIFTY</td>
+<td id="banknifty">Loading...</td>
+</tr>
+
+<tr>
+<td>INDIA VIX</td>
+<td id="vixLive">Loading...</td>
+</tr>
+
+<tr>
+<td>Trend</td>
+<td id="trend">Loading...</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+<h2>🤖 AI Trading Signal</h2>
+
+<h1 id="aiSignal">WAIT...</h1>
+
+<p>
+Confidence :
+<span id="confidence">0%</span>
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📰 Market News</h2>
+
+<ul id="news">
+
+<li>Loading latest news...</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
