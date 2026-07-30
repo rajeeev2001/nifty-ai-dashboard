@@ -107,3 +107,16 @@ document.addEventListener("DOMContentLoaded",()=>{
 runAI();
 
 });
+
+function loadOptionChain() {
+
+  const option = MarketAPI.getOptionChain();
+
+  document.getElementById("pcr").innerHTML = option.pcr;
+  document.getElementById("maxpain").innerHTML = option.maxPain;
+  document.getElementById("calloi").innerHTML = option.callOI;
+  document.getElementById("putoi").innerHTML = option.putOI;
+
+}
+
+loadOptionChain();
