@@ -1,30 +1,40 @@
 // ==========================
-// ai.js
-// AI Decision Engine v1
+// AI Engine Version 2
 // ==========================
 
-const AIEngine = {
+function runAI() {
 
-  analyze(market) {
+const data = MarketAPI.getMarketData();
 
-    let score = 50;
+let score = 50;
 
-    if (market.vix < 15) score += 10;
-    if (market.dow.includes("+")) score += 10;
-    if (market.nasdaq.includes("+")) score += 10;
-    if (market.gift.includes("🟢")) score += 10;
+if(parseFloat(data.vix) < 15) score += 10;
 
-    let signal = "NO TRADE";
+if(data.dow.includes("+")) score += 10;
 
-    if (score >= 80) signal = "BUY CE";
-    else if (score <= 40) signal = "BUY PE";
+if(data.nasdaq.includes("+")) score += 10;
 
-    return {
-      score: score,
-      signal: signal,
-      confidence: score
-    };
+if(data.gift.includes("🟢")) score += 15;
 
-  }
+let trend="Sideways";
+let trade="NO TRADE";
+let risk="Medium";
 
-};
+if(score>=80){
+trend="Bullish";
+trade="BUY CE";
+risk="Low";
+}
+else if(score<=40){
+trend="Bearish";
+trade="BUY PE";
+risk="High";
+}
+
+document.getElementById("score").innerHTML=score+"/100";
+document.getElementById("aiTrend").innerHTML=trend;
+document.getElementById("trade").innerHTML=trade;
+document.getElementById("risk").innerHTML=risk;
+document.getElementById("probability").innerHTML=score+"%";
+
+}
